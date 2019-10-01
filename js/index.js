@@ -1,7 +1,4 @@
 
-
-
-
 let iconWeather;
 let degreesWeather;
 let img = document.getElementById('img');
@@ -13,12 +10,6 @@ let config = {
         'Authorization': '563492ad6f917000010000011c8584e295dd4fbe8fc94050b40b07e3'
     }
 };
-
-
-
-
-
-
 
 function changeImages() {
 
@@ -46,5 +37,18 @@ function changeImages() {
         degrees.innerText = degreesWeather;
     }, 1000);
 }
+
+let relogio = () => {
+    let date = new Date();
+    let hour = date.getHours();
+    let min = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+    let seg = date.getSeconds();
+
+    let hours = `${hour}:${min}`;
+
+    document.getElementById('timer').innerHTML = hours;
+}
+
+let mostraRelogio = setInterval(relogio, 1000);
 
 
