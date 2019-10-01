@@ -24,7 +24,7 @@ function changeImages() {
         .then(function (res) {
 
             iconWeather = res.data.weather[0].icon;
-            degreesWeather = res.data.main.temp;
+            degreesWeather = `${Math.round(res.data.main.temp - 273)}°C`;
 
         }).catch(function (error) {
             console.log('chegou aqui');
