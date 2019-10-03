@@ -13,7 +13,7 @@ let config = {
 
 function changeImages() {
 
-    axios.get('https://api.pexels.com/v1/curated?per_page=15&page=1', config)
+    axios.get('https://api.pexels.com/v1/curated?per_page=15&page=1', config) //https://api.unsplash.com/search/photos?query=landscape&client_id=2d888541fe80477a46b3c0888a8866a5c3fe7dcc3470346a633a2a6478990956
         .then((res) => {
             items = res.data.photos.url;
         }).catch((err) => {
