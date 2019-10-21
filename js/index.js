@@ -49,7 +49,7 @@ function changeImages() {
         .then(function (res) {
 
             iconWeather = res.data.weather[0].icon;
-            degreesWeather = `${Math.round(res.data.main.temp - 273)}°C`;
+            degreesWeather = `${Math.round(res.data.main.temp - 273)}°`;
 
         }).catch(function (error) {
             console.log('chegou aqui');
